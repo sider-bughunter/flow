@@ -5,7 +5,7 @@
  * This file can be used for manual configuration. It will not be modified
  * if the flowDefaults constant exists.
  */
-const merge = require('webpack-merge');
+const { merge } = require('webpack-merge');
 const flowDefaults = require('./webpack.generated.js');
 
 /**
