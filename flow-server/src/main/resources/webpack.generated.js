@@ -239,8 +239,9 @@ module.exports = {
 
   devServer: {
     // webpack-dev-server serves ./ ,  webpack-generated,  and java webapp
-    contentBase: [outputFolder, 'src/main/webapp'],
-    after: function(app, server) {
+    static: [outputFolder, 'src/main/webapp'],
+    onAfterSetupMiddleware: function(server) {
+      const app = server.app;
       app.get(`/stats.json`, function(req, res) {
         res.json(stats);
       });
