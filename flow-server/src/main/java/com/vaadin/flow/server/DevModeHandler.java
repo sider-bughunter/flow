@@ -754,7 +754,7 @@ public final class DevModeHandler implements RequestHandler {
         command.add("watchDogPort=" + watchDog.get().getWatchDogPort());
         command.addAll(Arrays.asList(config
                 .getStringProperty(SERVLET_PARAMETER_DEVMODE_WEBPACK_OPTIONS,
-                        "-d --inline=false")
+                        "-d eval --inline=false")
                 .split(" +")));
         return command;
     }
