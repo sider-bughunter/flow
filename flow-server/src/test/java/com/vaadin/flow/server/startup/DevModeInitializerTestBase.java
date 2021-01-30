@@ -28,6 +28,7 @@ import org.mockito.Mockito;
 import com.vaadin.flow.di.Lookup;
 import com.vaadin.flow.di.ResourceProvider;
 import com.vaadin.flow.server.DevModeHandler;
+import com.vaadin.flow.server.DevModeHandlerTest;
 import com.vaadin.flow.server.VaadinServlet;
 import com.vaadin.flow.server.frontend.EndpointGeneratorTaskFactory;
 import com.vaadin.flow.server.frontend.FrontendUtils;
