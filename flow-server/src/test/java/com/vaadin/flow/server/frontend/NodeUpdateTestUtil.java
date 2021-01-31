@@ -138,7 +138,7 @@ public class NodeUpdateTestUtil {
             sb.append("setTimeout(() => {}, ").append(milliSecondsToRun).append(");\n");
         }
         sb.append("console.log(args);\n");
-        sb.append("console.log('[wps]: ").append(readyString).append(".');\n");
+        sb.append("console.log('").append(readyString).append(".');\n");
         FileUtils.write(serverFile, sb.toString(), "UTF-8");
     }
 

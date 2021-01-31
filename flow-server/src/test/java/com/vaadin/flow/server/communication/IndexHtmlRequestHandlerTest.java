@@ -47,6 +47,7 @@ import com.vaadin.flow.di.Lookup;
 import com.vaadin.flow.internal.UsageStatistics;
 import com.vaadin.flow.server.AppShellRegistry;
 import com.vaadin.flow.server.DevModeHandler;
+import com.vaadin.flow.server.DevModeHandlerTest;
 import com.vaadin.flow.server.MockServletServiceSessionSetup;
 import com.vaadin.flow.server.VaadinRequest;
 import com.vaadin.flow.server.VaadinResponse;
@@ -455,7 +456,7 @@ public class IndexHtmlRequestHandlerTest {
         File npmFolder = temporaryFolder.getRoot();
         String baseDir = npmFolder.getAbsolutePath();
         new File(baseDir, FrontendUtils.WEBPACK_CONFIG).createNewFile();
-        createStubWebpackServer("Failed to compile", 3000, baseDir);
+        createStubWebpackServer(DevModeHandlerTest.COMPILE_ERROR_OUTPUT, 3000, baseDir);
 
         // Create a DevModeHandler
         deploymentConfiguration.setEnableDevServer(true);
@@ -491,7 +492,7 @@ public class IndexHtmlRequestHandlerTest {
                 indexHtml.contains(
                         "<div class=\"v-system-error\" onclick=\"this.parentElement.removeChild(this)\">"));
         Assert.assertTrue("Should show webpack failure error",
-                indexHtml.contains("Failed to compile"));
+                indexHtml.contains("webpack 5.16.0 compiled with 2 errors"));
 
         handler.stop();
     }
