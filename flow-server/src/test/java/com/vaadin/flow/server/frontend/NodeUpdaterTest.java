@@ -42,7 +42,7 @@ import static com.vaadin.flow.server.frontend.FrontendUtils.FLOW_NPM_PACKAGE_NAM
 
 public class NodeUpdaterTest {
 
-    private static final String WEBPACK_DEFAULT_VERSION = "5.16.0";
+    private static final String WEBPACK_DEFAULT_VERSION = "5.22.0";
     @Rule
     public TemporaryFolder temporaryFolder = new TemporaryFolder();
 
